@@ -3,7 +3,10 @@ import { Search, Play, Plus, Star, ChevronLeft, ChevronRight, User } from 'lucid
 import { Button } from '@/components/ui/button.jsx'
 import { Input } from '@/components/ui/input.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
+import MovieDetailsModal from './components/ui/MovieDetailsModal'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -86,8 +89,11 @@ function App() {
   }
 
   const MovieCard = ({ movie, size = 'normal' }) => (
-    <div className={`group relative cursor-pointer transition-all duration-300 hover:scale-105 ${size === 'large' ? 'w-48 ' : 'w-40 '
-      }`}>
+    <div
+      onClick={() => setSelectedMovie(movie)}
+      className={`group relative cursor-pointer transition-all duration-300 hover:scale-105 ${size === 'large' ? 'w-48 ' : 'w-40 '
+        }`}
+    >
       <div className={`relative overflow-hidden rounded-lg bg-gray-800 ${size === 'large' ? 'h-72' : 'h-60'}`}>
 
         {movie.poster_path ? (
@@ -411,6 +417,12 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <MovieDetailsModal
+        movie={selectedMovie}
+        show={!!selectedMovie}
+        onHide={() => setSelectedMovie(null)}
+      />
     </div>
   )
 }
