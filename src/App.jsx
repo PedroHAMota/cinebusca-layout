@@ -194,7 +194,7 @@ function App() {
                     scrollToMovies()
                   }}
                 >
-                  Filmes em alta
+                  ㅤㅤFilmes em altaㅤㅤ
                 </button>
 
                 <button
@@ -204,7 +204,7 @@ function App() {
                     scrollToSeries()
                   }}
                 >
-                  Progamas Populares de TV
+                  ㅤㅤProgamas Populares de TVㅤㅤ
                 </button>
 
                 <button
@@ -214,7 +214,7 @@ function App() {
                     scrollToCartoons()
                   }}
                 >
-                  Cartoons
+                  ㅤㅤCartoonsㅤㅤ
                 </button>
               </nav>
             </div>
@@ -225,7 +225,7 @@ function App() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <Input
                     type="text"
-                    placeholder="Search"
+                    placeholder="ㅤㅤSearch"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10 bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 w-64"
@@ -277,11 +277,21 @@ function App() {
               <div className="flex space-x-4">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
                   <Play className="w-5 h-5 mr-2" />
-                  Watch Now
+                  Assista Agora
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8">
-                  Trailer
-                </Button>
+                <a
+                  href="https://www.youtube.com/watch?v=x4xsMz-L4hk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-black px-8"
+                  >
+                    Assistir ao Trailer
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -311,19 +321,19 @@ function App() {
           <div className="flex space-x-8 mb-6">
             <button className="flex items-center space-x-2 text-white">
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-sm">Trending</span>
+              <span className="text-sm">Tendenciaㅤㅤ</span>
             </button>
             <button className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-              <span className="text-sm">Popular</span>
+              <span className="text-sm">Popularesㅤㅤ</span>
             </button>
             <button className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-              <span className="text-sm">Recently added</span>
+              <span className="text-sm">Adicionados Recentementeㅤㅤ</span>
             </button>
             <button className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-              <span className="text-sm">Premium</span>
+              <span className="text-sm">Premiumㅤㅤ</span>
             </button>
           </div>
 
@@ -373,11 +383,11 @@ function App() {
                 <div className="flex space-x-4">
                   <Button className="bg-blue-600 hover:bg-blue-700">
                     <Play className="w-4 h-4 mr-2" />
-                    Watch
+                    Assistir
                   </Button>
                   <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-700">
                     <Plus className="w-4 h-4 mr-2" />
-                    MY LIST
+                    Minha Lista
                   </Button>
                 </div>
               </div>
@@ -398,7 +408,7 @@ function App() {
       {/* Show More Button */}
       <section className="container mx-auto px-4 py-8 text-center">
         <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-          Show More
+          Exibir Mais
         </Button>
       </section>
 
@@ -408,11 +418,11 @@ function App() {
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white mb-4">CINEBUSCA</h2>
             <div className="flex justify-center space-x-8 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">About us</a>
+              <a href="#" className="hover:text-white transition-colors">ASobre Nós</a>
               <a href="#" className="hover:text-white transition-colors">Vlog</a>
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
-              <a href="#" className="hover:text-white transition-colors">Report broken links</a>
-              <a href="#" className="hover:text-white transition-colors">Disclaimer</a>
+              <a href="#" className="hover:text-white transition-colors">Contato</a>
+              <a href="#" className="hover:text-white transition-colors">Reportar erro</a>
+              <a href="#" className="hover:text-white transition-colors">Suporte</a>
             </div>
           </div>
         </div>
